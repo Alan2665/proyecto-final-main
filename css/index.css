@@ -20,37 +20,68 @@ img {
 }
 
 /*Header Menu*/
-.header {
-    padding-top: 80px;
+    .header {
+    position: relative;
+    padding: 20px, 15px;
     width: 100%;
-    height: 400px;
-    margin-inline: auto;
+    height: 420px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #0F2027;
-    /* fallback for old browsers */
-    background: #0f0c29;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, hsla(240, 28%, 19%, 0.493), hsla(244, 38%, 28%, 0.473), hsla(246, 57%, 10%, 0.555)), url(../img/brissa_logo.jpg);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, hsla(240, 28%, 19%, 0.548), hsla(243, 35%, 39%, 0.548), hsla(246, 57%, 10%, 0.363)), url(../img/brissa_logo.jpg);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(
+      to right,
+      hsla(240, 27%, 19%, 0.534),
+      hsla(245, 39%, 28%, 0.521),
+      hsla(246, 55%, 10%, 0.562)
+    ),
+    url(../img/brissa_logo.jpg);
+    background-size: cover;
     background-repeat: no-repeat;
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-position: center;
     background-size: cover;
     background-attachment: fixed;
 }
 
-/*Logo*/
-.logo {
-    width: 200px;
-    height: 200px;
+/* Onda integrada al fondo */
+.wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    overflow: hidden;
+    line-height: 0;
+    z-index: 1; /* por debajo del contenido del header */
+}
+
+.wave svg {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+}
+.wave{
+    position: absolute ;
+    bottom: 0;
+    width: 100%;
 
 }
 
+/*Logo*/
+.logo {
+    padding: 70px;
+    width: 350px;
+    height: 350px;
+
+}
+.nombre-negocio{
+    color:aliceblue;
+}
+
 /*Navegacion*/
-.navegacion {
+.menu {
     display: flex;
     align-items: center;
     padding-left: 0;
@@ -59,20 +90,20 @@ img {
 
 /*Para dispositivos mas pequeños*/
 @media(min-width: 768px) {
-    .navegacion {
+    .menu {
         gap: 30px;
     }
 }
 
 /*Para dispositivos un poquito mas grandes*/
 @media(min-width: 992px) {
-    .navegacion {
+    .menu {
         gap: 50px;
     }
 }
 
 /*Estilos de los enlaces*/
-.navegacion a {
+.menu a {
     text-decoration: none;
     color: rgb(255, 255, 255);
     font-weight: 400;
@@ -80,12 +111,13 @@ img {
 }
 
 /*efecto de cada enlace*/
-.navegacion a:hover {
-    color: red;
+.menu a:hover {
+    color: rgb(240, 216, 5);
+    text-decoration: underline;
 
 }
 
-.navegacion li:last-child a {
+.menu li:last-child a {
     font-weight: 700;
 }
 
@@ -137,8 +169,8 @@ img {
 
 .boton_informacion button {
     padding: 10px;
-    background-color: green;
-    border: 1px solid green;
+    background-color: rgb(32, 123, 243);
+    border: 1px solid rgb(93, 209, 245);
     color: white;
     border-radius: 10px;
     font-weight: 700;
@@ -147,7 +179,7 @@ img {
 
 .boton_informacion button:hover {
     background-color: white;
-    color: green;
+    color: rgb(126, 128, 0);
     cursor: pointer;
 }
 
