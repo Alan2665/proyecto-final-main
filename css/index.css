@@ -1,0 +1,251 @@
+/*importamos un tipo de letra que en este caso sera roboto desde google fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+img {
+    width: 100%;
+    object-fit: cover;
+}
+
+/*Contenedor*/
+.contenedor {
+    background-color: rgb(243, 243, 243);
+    padding-bottom: 40px;
+}
+
+/*Header Menu*/
+.header {
+    padding-top: 80px;
+    width: 100%;
+    height: 400px;
+    margin-inline: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #0F2027;
+    /* fallback for old browsers */
+    background: #0f0c29;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, hsla(240, 28%, 19%, 0.493), hsla(244, 38%, 28%, 0.473), hsla(246, 57%, 10%, 0.555)), url(../img/brissa_logo.jpg);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, hsla(240, 28%, 19%, 0.548), hsla(243, 35%, 39%, 0.548), hsla(246, 57%, 10%, 0.363)), url(../img/brissa_logo.jpg);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-repeat: no-repeat;
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/*Logo*/
+.logo {
+    width: 200px;
+    height: 200px;
+
+}
+
+/*Navegacion*/
+.navegacion {
+    display: flex;
+    align-items: center;
+    padding-left: 0;
+    list-style: none;
+}
+
+/*Para dispositivos mas pequeños*/
+@media(min-width: 768px) {
+    .navegacion {
+        gap: 30px;
+    }
+}
+
+/*Para dispositivos un poquito mas grandes*/
+@media(min-width: 992px) {
+    .navegacion {
+        gap: 50px;
+    }
+}
+
+/*Estilos de los enlaces*/
+.navegacion a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: 400;
+    font-size: 40px;
+}
+
+/*efecto de cada enlace*/
+.navegacion a:hover {
+    color: red;
+
+}
+
+.navegacion li:last-child a {
+    font-weight: 700;
+}
+
+/*Pesentacion Principal*/
+.presentacion {
+    width: 70%;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;
+}
+
+/*Informacion principal*/
+.informacion {
+    width: 10%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 30px;
+}
+
+@media(min-width: 768px) {
+    .presentacion {
+        flex-direction: row;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        align-items: center;
+    }
+
+    .informacion {
+        text-align: start;
+        align-items: flex-start;
+        width: 50%;
+    }
+
+    .presentacion_imagen {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .presentacion img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+.boton_informacion button {
+    padding: 10px;
+    background-color: green;
+    border: 1px solid green;
+    color: white;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.boton_informacion button:hover {
+    background-color: white;
+    color: green;
+    cursor: pointer;
+}
+
+/*Informacion Imagen*/
+.presentacion_imagen {
+    max-width: 400px;
+    filter: drop-shadow(0 1mm 3mm rgba(46, 74, 255, 0.649));
+    position: relative;
+}
+
+/*Seccion Platos*/
+.comida {
+    width: 90%;
+    margin-inline: auto;
+}
+
+.platos {
+    display: flex;
+    grid-template-columns: 1fr;
+    row-gap: 50px;
+}
+
+@media(min-width: 768px) {
+    .platos {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media(min-width: 992px) {
+    .platos {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+.titulo_comida {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 85px;
+}
+
+@media(min-width: 768px) {
+    .titulo_comida {
+        text-align: start;
+    }
+}
+
+/*Contenedor de tarjetas*/
+.plato {
+    width: 80%;
+    margin-inline: auto;
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    text-align: center;
+    border-radius: 10px;
+    border: 1px solid rgb(196, 196, 196, 0.426);
+}
+
+.plato img {
+    width: 150px;
+    filter: drop-shadow(0 0 0.9rem red);
+    margin-top: -85px;
+}
+
+/*Parrafo de los platos*/
+.plato p {
+    font-size: 15px;
+    color: rgb(63, 63, 63);
+}
+
+.plato_precio {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-content: space-between;
+}
+
+/*Precio en negritas para que se pueda observar*/
+.plato_precio p {
+    font-weight: 900;
+}
+
+/*Boton de agregar*/
+.plato_precio button {
+    background-color: green;
+    color: white;
+    border-radius: 50px;
+    font-weight: 900;
+    font-size: 25px;
+    padding: 5px 12px;
+}
+
+/*Efecto del boton agregar*/
+.plato_precio button:hover {
+    cursor: pointer;
+}

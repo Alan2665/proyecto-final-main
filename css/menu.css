@@ -1,0 +1,26 @@
+html{
+     font-family: "Roboto", sans-serif;
+}
+.menu_comida{
+    background-image: url(../img/fondo\ final\ menu.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.wrap{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.column-3{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 1rem;
+    row-gap: 1rem;
+}
+.menu_comida{
+    color:rgb(0, 0, 0);
+    text-align: center;
+    border-radius: 6px;
+    display: flex;
+    flex-flow: column;
+}
