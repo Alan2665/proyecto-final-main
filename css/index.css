@@ -5,7 +5,7 @@
     margin: 0;
     border: 0;
     padding: 0;
-    font-family: "Roboto", sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 img {
@@ -15,7 +15,7 @@ img {
 
 /*Contenedor*/
 .contenedor {
-    background-color: rgb(243, 243, 243);
+    background-color: #ffff;
     padding-bottom: 40px;
 }
 /* HEADER PRINCIPAL */
@@ -73,6 +73,7 @@ img {
     height: 350px;
     transform: translateY(30%);
     border-radius: 47%;
+    box-shadow: 7px 7px 7px rgb(0, 0, 0);
 }
 
 /* Nombre del negocio */
@@ -182,7 +183,7 @@ img {
 }
 
 .boton_informacion button:hover {
-    background-color: white;
+    background-color: #ffff;
     color: rgb(126, 128, 0);
     cursor: pointer;
 }
@@ -190,104 +191,9 @@ img {
     width: 600px;
     height: 600px;
     border-radius: 30px;
-    box-shadow: black 2px;
+}
+.presentacion_imagen :hover{
+    transform: scale(1.11);
+    box-shadow: 7px 7px 28px 7px #00028d;
 }
 
-/*Informacion Imagen*/
-.presentacion_imagen {
-    max-width: 400px;
-    filter: drop-shadow(0 1mm 3mm rgba(46, 74, 255, 0.649));
-    position: relative;
-}
-
-/*Seccion Platos*/
-.comida {
-    width: 90%;
-    margin-inline: auto;
-}
-
-.platos {
-    display: flex;
-    grid-template-columns: 1fr;
-    row-gap: 50px;
-}
-
-@media(min-width: 768px) {
-    .platos {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-@media(min-width: 992px) {
-    .platos {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-    }
-}
-
-.titulo_comida {
-    text-align: center;
-    margin-top: 20px;
-    margin-bottom: 85px;
-}
-
-@media(min-width: 768px) {
-    .titulo_comida {
-        text-align: start;
-    }
-}
-
-/*Contenedor de tarjetas*/
-.plato {
-    width: 80%;
-    margin-inline: auto;
-    background-color: white;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-    text-align: center;
-    border-radius: 10px;
-    border: 1px solid rgb(196, 196, 196, 0.426);
-}
-
-.plato img {
-    width: 150px;
-    filter: drop-shadow(0 0 0.9rem red);
-    margin-top: -85px;
-}
-
-/*Parrafo de los platos*/
-.plato p {
-    font-size: 15px;
-    color: rgb(63, 63, 63);
-}
-
-.plato_precio {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    justify-content: space-between;
-}
-
-/*Precio en negritas para que se pueda observar*/
-.plato_precio p {
-    font-weight: 900;
-}
-
-/*Boton de agregar*/
-.plato_precio button {
-    background-color: green;
-    color: white;
-    border-radius: 50px;
-    font-weight: 900;
-    font-size: 25px;
-    padding: 5px 12px;
-}
-
-/*Efecto del boton agregar*/
-.plato_precio button:hover {
-    cursor: pointer;
-}
