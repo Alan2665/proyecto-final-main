@@ -327,7 +327,7 @@ img {
   overflow: hidden;
   position: relative;
   border-radius: 20px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 9px 5px 15px rgba(0, 0, 0, 0.945);
 }
 
 /* Cada ítem del carrusel */
