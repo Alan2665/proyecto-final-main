@@ -71,7 +71,8 @@
 }
 
 .plato img {
-    width: 150px;
+    width: 250px;
+    height: 250px;
     filter: drop-shadow(0 0 0.9rem rgb(6, 4, 124));
     margin-top: -85px;
 }
@@ -95,6 +96,7 @@
 .plato_precio p {
     font-weight: 900;
     font-size: 20px;
+    position: center;
 }
 
 .plato h1 {
@@ -151,13 +153,13 @@
 .plato2 {
     width: 80%;
     margin-inline: auto;
-    /*color de los contetendores*/
-    background: #11998e;
+    background: #396afc;
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #38ef7d, #11998e);
+    background: -webkit-linear-gradient(to bottom, #2948ff, #396afc);
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #38ef7d, #11998e);
+    background: linear-gradient(to bottom, #2948ff, #396afc);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 
 
     padding: 20px;
@@ -179,7 +181,7 @@
 
 .plato2 img {
     width: 150px;
-    filter: drop-shadow(0 0 0.9rem rgb(12, 255, 194));
+    filter: drop-shadow(0 0 0.9rem rgb(12, 57, 255));
     margin-top: -85px;
 }
 
@@ -207,4 +209,7 @@
 .plato2 h1 {
     color: #ffff;
     font-size: 32px;
+}
+.platobolonch{
+    width: 300px;
 }
