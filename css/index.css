@@ -148,8 +148,8 @@ img {
   width: 600px;
   height: auto;
   position: absolute;
-  top: 1200px;
-  left: 210px;
+  top: 1160px;
+  left: 190px;
   z-index: 3;
 }
 
@@ -194,7 +194,7 @@ img {
   width: 800px;
   height: auto;
   position: absolute;
-  top: 1850px;
+  top: 1830px;
   left: 910px;
   z-index: 3;
 }
@@ -239,7 +239,7 @@ img {
   width: 700px;
   height: auto;
   position: absolute;
-  top: 2500px;
+  top: 2450px;
   left: 130px;
   z-index: 3;
 }
