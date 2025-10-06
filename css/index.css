@@ -3,8 +3,8 @@
 
 * {
   margin: 0;
+  border: 0;
   padding: 0;
-  box-sizing: border-box;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
@@ -13,18 +13,21 @@ img {
   object-fit: cover;
 }
 
+/*Contenedor*/
 .contenedor {
-  background-color: #fff;
+  background-color: #ffff;
   padding-bottom: 40px;
+  /*llena toda la pantalla*/
 }
 
-/* ===== HEADER ===== */
+/* HEADER PRINCIPAL */
 .header {
   position: relative;
+  padding: 20px 15px;
   width: 100%;
   height: 420px;
   display: flex;
-  flex-direction: column;
+  align-items: center;
   justify-content: space-between;
   background: linear-gradient(to right,
       hsla(240, 27%, 19%, 0.534),
@@ -32,14 +35,12 @@ img {
       hsla(246, 55%, 10%, 0.562)),
     url(../img/brissa_logo.jpg);
   background-size: cover;
-  background-position: center;
   background-repeat: no-repeat;
+  background-position: center;
   background-attachment: fixed;
-  padding: 20px 15px;
-  z-index: 1;
 }
 
-/* Ola */
+/* Onda azul */
 .wave {
   position: absolute;
   bottom: 0;
@@ -47,178 +48,370 @@ img {
   width: 100%;
   height: 80px;
   overflow: hidden;
-  z-index: 2;
+  line-height: 0;
+  z-index: 1;
 }
 
 .wave svg {
+  display: block;
   width: 100%;
   height: 100%;
 }
 
-/* Logo + Nombre */
+/* LOGO + NOMBRE */
 .logo-container {
   display: flex;
   align-items: center;
   gap: 20px;
   position: absolute;
-  top: 50px;
+  top: 40px;
   left: 30px;
   z-index: 3;
 }
 
+/* Logo */
 .logo {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.5);
+  width: 450px;
+  height: 350px;
+  transform: translateY(30%);
+  border-radius: 47%;
+  box-shadow: 7px 7px 7px rgb(0, 0, 0);
 }
 
+/* Nombre del negocio */
 .nombre-negocio {
   color: white;
-  font-size: 36px;
+  font-size: 67px;
   font-weight: bold;
+  transform: translateY(30%);
+  /*Desplaza el elemento en el eje Y (vertical) un 30% de su propia altura hacia abajo.*/
 }
 
-/* Menú de navegación */
+/* MENÚ DE NAVEGACIÓN */
 .menu {
+  padding: 40px;
   display: flex;
-  justify-content: flex-end;
   align-items: center;
-  gap: 30px;
-  padding: 20px 40px;
-  z-index: 4;
+  gap: 400px;
+  margin-left: auto;
+  /* → Alinea a la derecha */
+  z-index: 2;
 }
 
+/* Estilo de los enlaces */
 .menu a {
   text-decoration: none;
   color: white;
-  font-size: 20px;
-  transition: color 0.3s ease;
+  font-size: 65px;
 }
 
 .menu a:hover {
   color: rgb(240, 216, 5);
   text-decoration: underline;
+  /*para que al pasar el mouse por encima de un subrayado */
 }
 
-/* Responsive del menú */
-@media (max-width: 768px) {
+/* RESPONSIVE: Dispositivos más grandes */
+@media (min-width: 768px) {
   .menu {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
+    gap: 40px;
   }
 
   .menu a {
-    font-size: 18px;
+    font-size: 22px;
+  }
+}
+
+@media (min-width: 992px) {
+  .menu {
+    gap: 60px;
   }
 
-  .logo-container {
-    flex-direction: column;
-    text-align: center;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  .logo {
-    width: 100px;
-    height: 100px;
-  }
-
-  .nombre-negocio {
+  .menu a {
     font-size: 24px;
   }
 }
 
-/* ===== Sección Inicio ===== */
+/*Informacion principal*/
 .seccion_inicio {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 40px;
+  gap: -2px;
   padding: 90px 20px;
+
 }
 
+/*primera imagen del inicio*/
 .inicio {
-  width: 400px;
+  width: 600px;
   height: auto;
+  position: absolute;
+  top: 1200px;
+  left: 210px;
+  z-index: 3;
 }
 
+/*palabras de las mejores combinaciones*/
 .texto_inicio {
-  background: linear-gradient(to right, #f7b733, #fc4a1a);
-  padding: 50px;
-  border-radius: 20px;
-  font-size: 30px;
+  background: #00c6ff;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #0072ff, #00c6ff);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #0072ff, #00c6ff);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  padding: 80px;
+  border-radius: 40px;
+  font-size: 40px;
   color: white;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-left: 560px;
+  /* → Alinea a la derecha */
+
 }
 
+/*resalta el contenedor con un sombreado*/
 .texto_inicio:hover {
+  transform: scale(1.05);
+  box-shadow: 7px 7px 28px 7px #5180e7;
+}
+
+.seccion_inicio2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: -2px;
+  padding: 90px 20px;
+
+}
+
+/*primera imagen del inicio*/
+.inicio2 {
+  width: 800px;
+  height: auto;
+  position: absolute;
+  top: 1850px;
+  left: 910px;
+  z-index: 3;
+}
+
+/*palabras de las mejores combinaciones*/
+.texto_inicio2 {
+  background: #B3FFAB;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #12FFF7, #B3FFAB);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #12FFF7, #B3FFAB);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  padding: 80px;
+  border-radius: 10%;
+  font-size: 40px;
+  color: white;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-right: 560px;
+  /* → Alinea a la derecha */
+
+}
+
+/*resalta el contenedor con un sombreado*/
+.texto_inicio2:hover {
+  transform: scale(1.05);
+  box-shadow: 7px 7px 28px 7px #6af5ff;
+}
+
+.seccion_inicio3 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: -2px;
+  padding: 90px 20px;
+
+}
+
+/*primera imagen del inicio*/
+.inicio3 {
+  width: 700px;
+  height: auto;
+  position: absolute;
+  top: 2500px;
+  left: 130px;
+  z-index: 3;
+}
+
+/*palabras de las mejores combinaciones*/
+.texto_inicio3 {
+  background: linear-gradient(to right, #f7b733, #fc4a1a);
+  padding: 80px;
+  border-radius: 20px;
+  font-size: 40px;
+  color: white;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-left: 560px;
+  /* → Alinea a la derecha */
+
+}
+
+/*resalta el contenedor con un sombreado*/
+.texto_inicio3:hover {
   transform: scale(1.05);
   box-shadow: 7px 7px 28px 7px #fd8b09;
 }
 
-/* ===== Presentación ===== */
+.informacion {
+  width: 10%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  font-size: 30px;
+}
+
 .presentacion {
-  width: 90%;
-  margin: 0 auto;
+  width: 85%;
+  margin-inline: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 40px;
-  padding: 40px 0;
+  gap: 60px;
 }
 
 @media(min-width: 768px) {
   .presentacion {
     flex-direction: row;
-    justify-content: space-between;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    align-items: center;
+  }
+
+  .informacion {
+    text-align: start;
+    align-items: flex-start;
+    width: 50%;
+  }
+
+  .presentacion_imagen {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 
-.informacion {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  font-size: 22px;
-  color: #333;
-}
-
-.boton_informacion button {
-  padding: 10px 20px;
-  background-color: rgb(32, 123, 243);
-  color: white;
-  border: none;
-  border-radius: 10px;
-  font-weight: 700;
-  font-size: 18px;
-  cursor: pointer;
-}
-
-.boton_informacion button:hover {
-  background-color: white;
-  color: rgb(32, 123, 243);
-  border: 2px solid rgb(32, 123, 243);
-}
-
+/* Estilo principal del carrusel */
 .presentacion_imagen {
-  flex: 1;
+  width: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
-.img3 {
+.carrousel {
   width: 100%;
-  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Contenedor del carrusel */
+.conteCarrousel {
+  width: 100%;
+  max-width: 800px;
+  height: 350px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Cada ítem del carrusel */
+.itemCarrousel {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  animation-name: slideAnimation;
+  animation-duration: 10s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  border-radius: 80px;
+  z-index: 0;
+  
+}
+
+/* Animación con delay para cada slide */
+.itemCarrousel:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.itemCarrousel:nth-child(2) {
+  animation-delay: 3s;
+}
+
+.itemCarrousel:nth-child(3) {
+  animation-delay: 6s;
+}
+
+/* Animación que controla la opacidad para mostrar solo un slide a la vez */
+@keyframes slideAnimation {
+  0% {opacity: 0;}
+  10% {opacity: 1;}
+  30% {opacity: 1;}
+  40% {opacity: 0;}
+  100% {opacity: 0;}
+}
+
+/* Contenido de cada tarjeta */
+.itemCarrouselTarjeta {
+  width: 100%;
+  height: 100%;
+}
+
+.conteCarrousel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   border-radius: 20px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.img3:hover {
+/* Hover sobre imagen (opcional) */
+.conteCarrousel img:hover {
   transform: scale(1.05);
   box-shadow: 7px 7px 28px 7px #00028d;
 }
+
+/* --- Botón de "Explorar platillos" (sin cambios) --- */
+
+.boton_informacion button {
+  padding: 10px;
+  background-color: rgb(32, 123, 243);
+  border: 1px solid rgb(93, 209, 245);
+  color: white;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 20px;
+  transition: 0.3s ease;
+}
+
+.boton_informacion button:hover {
+  background-color: #ffff;
+  color: rgb(126, 128, 0);
+  cursor: pointer;
+}
+
+/* --- Otros estilos (imagen presentación etc) --- */
+
+.img3 {
+  width: 600px;
+  height: 600px;
+  border-radius: 30px;
+}
+
+

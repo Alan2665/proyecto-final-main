@@ -4,50 +4,42 @@
     filter: drop-shadow(0 1mm 3mm rgba(61, 187, 245, 0.507));
     position: relative;
 }
-
 /*Seccion Platos*/
 .comida {
     width: 90%;
     margin-inline: auto;
 }
-
 .platos {
     display: grid;
     grid-template-columns: 1fr;
     row-gap: 90px;
 }
-
 @media (min-width: 768px) {
     .platos {
         grid-template-columns: 1fr 1fr;
     }
 }
-
 @media (min-width: 992px) {
     .platos {
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 }
-
-
 .titulo_comida {
     text-align: center;
     margin-top: 20px;
     margin-bottom: 85px;
     font-size: 43px;
 }
-
 @media(min-width: 768px) {
     .titulo_comida {
         text-align: center;
     }
 }
-
 /*Contenedor de tarjetas*/
 .plato {
     width: 80%;
     margin-inline: auto;
-
+/*color de los contetendores*/
     /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #021B79, #0575E6);
     /* Chrome 10-25, Safari 5.1-6 */
@@ -152,15 +144,13 @@
 .plato2 {
     width: 80%;
     margin-inline: auto;
-
+/*color de los contetendores*/
     background: #F2994A;
     /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #F2C94C, #F2994A);
     /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #F2C94C, #F2994A);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-
     padding: 20px;
     display: flex;
     flex-direction: column;
