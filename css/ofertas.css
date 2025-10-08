@@ -1,6 +1,157 @@
-body{
-    margin: 0;
-    padding: 0;
-    display: flex;
-    background-color: blueviolet;
+
+
+/* Contenedor general */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f0f8ff;
+  color: #333;
+}
+
+.headerplato h1 {
+  font-size: 3rem;
+  color: #0288d1;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 1rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.headerplato p {
+  text-align: center;
+  color: #555;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+/* Sección principal */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.principal h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #007399;
+  margin-bottom: 0.5rem;
+}
+
+.principal p {
+  text-align: center;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+/* Cartas */
+.cartaDia {
+  background: #fff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 15px;
+  padding: 25px 30px;
+  max-width: 600px;
+  margin: 0 auto 30px;
+  position: relative;
+  border-top: 6px solid #0288d1;
+}
+
+/* Imagen del día */
+.dia img {
+  display: block;
+  margin: 0 auto 20px;
+  max-width: 90%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Platos */
+.plato h4 {
+  font-size: 1.6rem;
+  color: #ff9800;
+  margin-bottom: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/* Lista */
+.plato ul {
+  list-style: none;
+  padding: 0;
+}
+
+.plato ul li {
+  font-size: 1.1rem;
+  padding: 10px 0;
+  border-bottom: 1px dashed #ccc;
+  text-align: center;
+}
+
+.plato ul li:last-child {
+  border-bottom: none;
+}
+
+/* Icono decorativo */
+.plato ul li::before {
+  content: "🍤 ";
+  font-size: 1.2rem;
+}
+
+/* Efecto hover */
+.plato ul li:hover {
+  background: #e0f7fa;
+  color: #007399;
+  transition: 0.3s;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .headerplato h1 {
+    font-size: 2rem;
+  }
+
+  .plato h4 {
+    font-size: 1.4rem;
+  }
+
+  .plato ul li {
+    font-size: 1rem;
+  }
+
+  .dia img {
+    max-width: 100%;
+  }
+}
+.imagen-ceviche {
+  text-align: center;
+  width: 35%;
+}
+
+.imagen-ceviche img {
+  max-width: 100%;
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.imagen-ceviche h3 {
+  background: #0288d1;
+  color: #fff;
+  padding: 5px 0;
+  border-radius: 5px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+@media (max-width: 700px) {
+  .carta {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .imagen-ceviche {
+    width: 100%;
+    margin-top: 1rem;
+  }
 }
