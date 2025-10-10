@@ -159,12 +159,20 @@ p {
 .direction {
     display: flex;
     text-align: center;
-    flex-direction: column;
+    background-color: #6f94b8;
 }
 
-.direction__title {
-    background-color: #0288d1;
-    font-size: 40px;
+
+.direction {
+    border-top: 2px solid black;
+    padding: 20px;
+    display: flex;
+    justify-content:start;
+    flex-flow: column;
+}
+
+.titel__direccion {
+    padding: 20px;
 }
 
 /*-----etiqueta del mapa-----*/
@@ -172,68 +180,21 @@ iframe {
     width: 100%;
     height: 100%;
 }
-
 .direction__map {
-    width: auto;
+    width: 500px;
     height: 300px;
-    margin-top: 20px;
-}
-
-.inf {
-    flex-direction: row;
+    border: 1px solid #000;
+    box-shadow: 5px 5px #000;
 }
 
 .text__inf {
-    justify-content: center;
     width: 500px;
-    margin: 20px;
-    margin: auto;
-}
-
-.text__location {
-    font-size: 30px;
-}
-
-/*-----en esta parte va el contacto de los restaurantes-----*/
-.contact {
-    /* es el objeto padre*/
-    align-items: stretch;
-    text-align: center;
-    display: flex;
-    justify-content: space-around;
-
+    border: 1px solid black;
 
 }
 
-/*objetos hijo*/
-
-.contact_title {
-    width: 100%;
-    text-align: center;
-    padding: 40px;
-    background-color: #0288d1;
-}
-
-.restaurant__contact,
-.at-home__contact,
-.social__itms {
-    background-color: #DE9728;
-    width: 100%;
-    padding: 10px;
-
-
-}
-
-.restaurant__contact:hover,
-.at-home__contact:hover,
-.social__itms:hover {
-    border-left: 2px solid #0E063B;
-    border-right: 2px solid #0E063B;
-
-}
-
-.at-home__contact {
-    background-color: #0288d1;
+.contactos{
+    border-top: 2px solid black;
 }
 
 .phone__direction {
