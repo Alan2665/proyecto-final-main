@@ -1,0 +1,272 @@
+/*importamos un tipo de letra que en este caso sera roboto desde google fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+img {
+    width: 100%;
+    object-fit: cover;
+}
+
+/*Contenedor*/
+.contenedor {
+    background-color: #ffff;
+    padding-bottom: 40px;
+    /*llena toda la pantalla*/
+}
+
+/* HEADER PRINCIPAL */
+.header {
+    position: relative;
+    padding: 20px 15px;
+    width: 100%;
+    height: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(to right,
+            hsla(240, 27%, 19%, 0.534),
+            hsla(245, 39%, 28%, 0.521),
+            hsla(246, 55%, 10%, 0.562)),
+        url(../img/brissa_logo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Onda azul */
+.wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    overflow: hidden;
+    line-height: 0;
+    z-index: 1;
+}
+
+.wave svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/* LOGO + NOMBRE */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: absolute;
+    top: 40px;
+    left: 30px;
+    z-index: 3;
+}
+
+/* Logo */
+.logo {
+    width: 450px;
+    height: 350px;
+    transform: translateY(30%);
+    border-radius: 47%;
+    box-shadow: 7px 7px 7px rgb(0, 0, 0);
+}
+
+/* Nombre del negocio */
+.nombre-negocio {
+    color: white;
+    font-size: 67px;
+    font-weight: bold;
+    transform: translateY(30%);
+    /*Desplaza el elemento en el eje Y (vertical) un 30% de su propia altura hacia abajo.*/
+}
+
+/* MENÚ DE NAVEGACIÓN */
+.menu {
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    gap: 400px;
+    margin-left: auto;
+    /* → Alinea a la derecha */
+    z-index: 2;
+}
+
+/* Estilo de los enlaces */
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 65px;
+}
+
+.menu a:hover {
+    color: rgb(240, 216, 5);
+    text-decoration: underline;
+    /*para que al pasar el mouse por encima de un subrayado */
+}
+
+/* RESPONSIVE: Dispositivos más grandes */
+@media (min-width: 768px) {
+    .menu {
+        gap: 40px;
+    }
+
+    .menu a {
+        font-size: 22px;
+    }
+}
+
+@media (min-width: 992px) {
+    .menu {
+        gap: 60px;
+    }
+
+    .menu a {
+        font-size: 24px;
+    }
+}
+
+/*-----contendio de la pagina-----*/
+
+
+h2,
+h3 {
+    font-size: 30px;
+    padding: 10px;
+    justify-content: center;
+    color: #eee;
+}
+
+p {
+    font-size: 25px;
+}
+
+.contenedor__inf {
+
+    display: flex;
+    margin: 0;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/*-----Direccion del estableciomiento-----*/
+.direction {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+}
+
+.direction__title {
+    background-color: #0288d1;
+    font-size: 40px;
+}
+
+/*-----etiqueta del mapa-----*/
+iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.direction__map {
+    width: auto;
+    height: 300px;
+    margin-top: 20px;
+}
+
+.inf {
+    flex-direction: row;
+}
+
+.text__inf {
+    justify-content: center;
+    width: 500px;
+    margin: 20px;
+    margin: auto;
+}
+
+.text__location {
+    font-size: 30px;
+}
+
+/*-----en esta parte va el contacto de los restaurantes-----*/
+.contact {
+    /* es el objeto padre*/
+    align-items: stretch;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+
+
+}
+
+/*objetos hijo*/
+
+.contact_title{
+    width: 100%;
+    text-align: center;
+    padding: 40px;
+
+}
+
+.restaurant__contact,
+.at-home__contact,
+.social__itms {
+    background-color: #DE9728;
+    width: 100%;
+    padding: 10px;
+
+
+}
+
+.restaurant__contact:hover,
+.at-home__contact:hover,
+.social__itms:hover {
+    border-left: 2px solid #0E063B;
+    border-right: 2px solid #0E063B;
+
+}
+
+.at-home__contact {
+    background-color: #0288d1;
+}
+
+.phone__direction {
+    display: flex;
+
+}
+
+.phone {
+    padding: 5px;
+    display: inline-table;
+
+}
+
+.phone__number {
+    transition: 0.7ms;
+}
+
+.phone__number:hover {
+    text-decoration: underline;
+    font-size: 22px;
+    color: #eee;
+}
+
+.icon {
+    color: #000;
+    text-decoration: none;
+    font-size: 30px;
+    margin: 10px;
+    transition: 0.7ms;
+
+}
+
+.icon:hover {
+    font-size: 32px;
+        color: #000;
+}
