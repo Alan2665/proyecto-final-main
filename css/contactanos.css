@@ -147,8 +147,12 @@ p {
     font-size: 25px;
 }
 
-.contenedor__inf {
+a {
+    text-decoration: none;
+    color: #000;
+}
 
+.contenedor__inf {
     display: flex;
     margin: 0;
     flex-direction: column;
@@ -156,34 +160,15 @@ p {
 }
 
 /*-----Direccion del estableciomiento-----*/
-<<<<<<< HEAD
-=======
 .direction {
     display: flex;
-    text-align: center;
-    background-color: #6f94b8;
-}
-
-
->>>>>>> 1e7a622c4bf61c3461036f2df470dfac5f30764a
-.direction {
-    display: flex;
-<<<<<<< HEAD
     text-align: center;
     flex-direction: column;
 }
 
 .direction__title {
-    background-color: #0288d1;
+    background-color: #2948ff;
     font-size: 40px;
-=======
-    justify-content:start;
-    flex-flow: column;
-}
-
-.titel__direccion {
-    padding: 20px;
->>>>>>> 1e7a622c4bf61c3461036f2df470dfac5f30764a
 }
 
 /*-----etiqueta del mapa-----*/
@@ -193,9 +178,8 @@ iframe {
 }
 
 .direction__map {
-<<<<<<< HEAD
     width: auto;
-    height: 300px;
+    height: 400px;
     margin-top: 20px;
 }
 
@@ -230,8 +214,8 @@ iframe {
 .contact_title {
     width: 100%;
     text-align: center;
-    padding: 40px;
-    background-color: #0288d1;
+    padding-top: 40px;
+    background-color: #2948ff;
 }
 
 .restaurant__contact,
@@ -240,20 +224,22 @@ iframe {
     background-color: #DE9728;
     width: 100%;
     padding: 10px;
+}
 
-
+.social__itms {
+    font-size: 15PX;
 }
 
 .restaurant__contact:hover,
 .at-home__contact:hover,
 .social__itms:hover {
-    border-left: 2px solid #0E063B;
-    border-right: 2px solid #0E063B;
+    border-left: 2px solid #87878d;
+    border-right: 2px solid #87878d;
 
 }
 
 .at-home__contact {
-    background-color: #0288d1;
+    background-color: #2948ff;
 }
 
 .phone__direction {
@@ -261,55 +247,32 @@ iframe {
 
 }
 
-=======
-    width: 500px;
-    height: 300px;
-    border: 1px solid #000;
-    box-shadow: 5px 5px #000;
-}
-
-.text__inf {
-    width: 500px;
-    border: 1px solid black;
-
-}
-
-.contactos{
-    border-top: 2px solid black;
-}
-
-.phone__direction {
-    display: flex;
-
-}
-
->>>>>>> 1e7a622c4bf61c3461036f2df470dfac5f30764a
 .phone {
     padding: 5px;
     display: inline-table;
-
 }
 
 .phone__number {
-    transition: 0.7ms;
+    transition: 0.2s;
+
 }
 
 .phone__number:hover {
-    text-decoration: underline;
-    font-size: 22px;
+    font-size: 20px;
     color: #eee;
 }
 
 .icon {
     color: #000;
     text-decoration: none;
-    font-size: 30px;
+    font-size: 20px;
     margin: 10px;
-    transition: 0.7ms;
+    transition: 0.2s;
 
 }
 
 .icon:hover {
-    font-size: 32px;
-        color: #eee;
+    font-size: 25px;
+    color: #eee;
+    margin: 1px;
 }
