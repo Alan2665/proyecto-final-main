@@ -36,7 +36,7 @@
 }
 
 /*=========================
-   CARTAS OFERTAS
+   CARTAS OFERTAS — NUEVO FONDO
 =========================*/
 .especialidadDia {
   margin-bottom: 60px;
@@ -45,7 +45,7 @@
 
 .cartaDia {
   border-radius: 20px;
-  background: #fff;
+  background: linear-gradient(to bottom, #00c6ff, #0072ff);
   padding: 30px 40px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
   border-top: 6px solid #007bff;
@@ -63,7 +63,7 @@
 .dia img {
   display: block;
   margin: 0 auto;
-  max-width: 400px; /* más grande que antes */
+  max-width: 400px;
   height: auto;
 }
 
@@ -96,7 +96,7 @@
 .imagen-platoMiercoles img {
   display: block;
   margin: 0 auto;
-  max-width: 320px; /* más grande que las demás */
+  max-width: 320px;
   height: auto;
   border-radius: 15px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
@@ -148,15 +148,15 @@
   letter-spacing: 1px;
   text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.4);
   margin-bottom: 15px;
+  transition: transform 0.3s ease, text-shadow 0.3s ease;
 }
 
 .plato h2:hover,
 .platoN2 h2:hover,
 .platoN3 h2:hover,
 .platoMartes h2:hover {
-  text-shadow: 2px 2px 20px rgba(255,255,255,0.8);
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.9);
   transform: scale(1.05);
-  transition: transform 0.3s ease, text-shadow 0.3s ease;
 }
 
 /*=========================
@@ -178,7 +178,7 @@
   font-size: 1.15rem;
   padding: 10px 0;
   border-bottom: 1px dotted #b3d1ff;
-  color: #cce5ff;
+  color: #e6f7ff;
   text-align: left;
   display: flex;
   align-items: center;
@@ -198,7 +198,7 @@
 .platoN2 ul li::before,
 .platoN3 ul li::before,
 .platoMartes ul li::before {
-  content: "🍽️";
+  content: "🍽";
   font-size: 1.2rem;
   margin-right: 10px;
 }
@@ -273,10 +273,10 @@
 }
 
 /*=========================
-   MARTES ESPECIAL
+   MARTES ESPECIAL — NUEVO FONDO
 =========================*/
-.cartaDia {
-  background: linear-gradient(to bottom, #d4f0ff, #007bff 80%);
+.cartaDia.martes {
+  background: linear-gradient(to bottom, #00c6ff, #0072ff 80%);
   color: white;
   border-radius: 20px;
   overflow: hidden;
@@ -288,7 +288,7 @@
   margin: 0 auto 20px auto;
   max-width: 380px;
   height: auto;
-  filter: drop-shadow(2px 4px 8px rgba(0,0,0,0.3));
+  filter: drop-shadow(2px 4px 8px rgba(0, 0, 0, 0.3));
   transition: transform 0.3s ease;
 }
 
@@ -296,8 +296,7 @@
   transform: scale(1.05);
 }
 
-/* Fondo con efecto de ola */
-.cartaDia::after {
+.cartaDia.martes::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -317,16 +316,16 @@
   text-transform: uppercase;
   text-align: left;
   margin-bottom: 20px;
-  text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 .platoMartes ul li {
   font-size: 1.2rem;
   padding: 10px 0;
-  border-bottom: 1px solid rgba(255,255,255,0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
   color: #fff;
   font-weight: 500;
-  text-shadow: 1px 1px 6px rgba(0,0,0,0.3);
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.3);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -351,7 +350,7 @@
   width: 100%;
   max-width: 280px;
   border-radius: 20px;
-  filter: drop-shadow(0 5px 15px rgba(0,0,0,0.4));
+  filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.4));
   transition: transform 0.3s ease;
 }
 
