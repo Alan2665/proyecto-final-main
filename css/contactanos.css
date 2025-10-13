@@ -1,6 +1,8 @@
 /*importamos un tipo de letra que en este caso sera roboto desde google fonts*/
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
+
+/*asignacion de estilos globales*/
 * {
     margin: 0;
     border: 0;
@@ -95,7 +97,7 @@ img {
     gap: 400px;
     margin-left: auto;
     /* → Alinea a la derecha */
-    z-index: 2;
+    z-index: 4;
 }
 
 /* Estilo de los enlaces */
@@ -103,6 +105,7 @@ img {
     text-decoration: none;
     color: white;
     font-size: 65px;
+    z-index: 10;
 }
 
 .menu a:hover {
@@ -135,6 +138,10 @@ img {
 /*-----contendio de la pagina-----*/
 
 
+#boton__menu {
+    display: none;
+}
+
 h2,
 h3 {
     font-size: 30px;
@@ -158,6 +165,7 @@ a {
     flex-direction: column;
     justify-content: center;
 }
+
 
 /*-----Direccion del estableciomiento-----*/
 .direction {
@@ -189,8 +197,9 @@ iframe {
 
 .text__inf {
     justify-content: center;
-    width: 500px;
-    margin: 20px;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 10px 20px;
     margin: auto;
 }
 
@@ -275,4 +284,138 @@ iframe {
     font-size: 25px;
     color: #eee;
     margin: 1px;
+}
+
+
+/*-----Media-querist-----*/
+
+@media(max-width:900px) {
+
+    .header {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        width: 100%;
+        height: 420px;
+        padding: 30px;
+        margin: 0;
+    }
+
+    /*-----alineación en el logo y el texto-----*/
+    .logo-container {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    h1 {
+        justify-content: center;
+        text-align: center;
+    }
+
+
+
+    .nombre-negocio {
+        align-self: auto;
+        text-align: center;
+        justify-content: center;
+        color: white;
+        font-size: 40px;
+        font-weight: bold;
+        margin: 0;
+        top: 0;
+        z-index: 5;
+
+    }
+
+    .logo {
+        width: 250px;
+        height: 150px;
+        margin: 0;
+        z-index: 5;
+    }
+
+
+
+    .direction__title {
+        font-size: 35px;
+    }
+
+    .direction__map {
+        width: 100%;
+        height: 250px;
+    }
+
+
+    .text__inf {
+        display: block;
+        flex-direction: column;
+    }
+
+    .text__inf,
+    .contact {
+        display: flex;
+        /* usar flex para aplicar flex-direction */
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    /*-----La seccion del menu se trnsforma en un elemento adaptable para dispositivos moviles-----*/
+    .menu {
+        display: none;
+    }
+
+    .logo-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        align-items: flex-end;
+    }
+
+    #boton__menu {
+        margin-left: auto;
+        font-size: 40px;
+        display: flex;
+        justify-content: flex-start;
+        color: #eee;
+        cursor: pointer;
+        z-index: 10;
+        position:relative;
+    }
+
+    /*funcionalidad al menu hamburguesa*/
+    .menu.active {
+        width: 35%;
+        margin: 0;
+        position:absolute;
+
+        display: flex;
+        flex-direction: column;
+        gap: 1px;/*define el espacio entre los elementos*/
+        z-index: 10;
+        /*le damos un borde y un fondo al menu*/
+        border-radius: 5px;
+        background-color: rgba(11, 18, 58, 0.6);
+        backdrop-filter: blur(10px);
+        .menu__link {
+            padding: 10px;
+
+            width: 100%;
+            height: 100%;
+            font-size: 20px;
+            color: #fff;
+            justify-content: center;
+            border-bottom: 1px solid #eee;
+        }
+        .menu__link:hover {
+            color: rgb(240, 216, 5);
+            text-decoration: underline;
+            /*para que al pasar el mouse por encima de un subrayado */
+        }
+
+    }
+
+
 }
