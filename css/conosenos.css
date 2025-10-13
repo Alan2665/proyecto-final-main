@@ -156,19 +156,8 @@ p {
 }
 
 /*-----Direccion del estableciomiento-----*/
-<<<<<<< HEAD
-=======
 .direction {
     display: flex;
-    text-align: center;
-    background-color: #6f94b8;
-}
-
-
->>>>>>> 1e7a622c4bf61c3461036f2df470dfac5f30764a
-.direction {
-    display: flex;
-<<<<<<< HEAD
     text-align: center;
     flex-direction: column;
 }
@@ -176,14 +165,6 @@ p {
 .direction__title {
     background-color: #0288d1;
     font-size: 40px;
-=======
-    justify-content:start;
-    flex-flow: column;
-}
-
-.titel__direccion {
-    padding: 20px;
->>>>>>> 1e7a622c4bf61c3461036f2df470dfac5f30764a
 }
 
 /*-----etiqueta del mapa-----*/
@@ -193,7 +174,6 @@ iframe {
 }
 
 .direction__map {
-<<<<<<< HEAD
     width: auto;
     height: 300px;
     margin-top: 20px;
@@ -227,11 +207,11 @@ iframe {
 
 /*objetos hijo*/
 
-.contact_title {
+.contact_title{
     width: 100%;
     text-align: center;
     padding: 40px;
-    background-color: #0288d1;
+
 }
 
 .restaurant__contact,
@@ -261,29 +241,6 @@ iframe {
 
 }
 
-=======
-    width: 500px;
-    height: 300px;
-    border: 1px solid #000;
-    box-shadow: 5px 5px #000;
-}
-
-.text__inf {
-    width: 500px;
-    border: 1px solid black;
-
-}
-
-.contactos{
-    border-top: 2px solid black;
-}
-
-.phone__direction {
-    display: flex;
-
-}
-
->>>>>>> 1e7a622c4bf61c3461036f2df470dfac5f30764a
 .phone {
     padding: 5px;
     display: inline-table;
@@ -311,5 +268,5 @@ iframe {
 
 .icon:hover {
     font-size: 32px;
-        color: #eee;
+        color: #000;
 }
