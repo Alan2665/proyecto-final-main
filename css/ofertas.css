@@ -1,4 +1,6 @@
-/*titulo principal*/
+/*=========================
+   TITULO PRINCIPAL
+=========================*/
 .headerplato {
   text-align: center;
   margin: 40px 0;
@@ -21,7 +23,9 @@
   margin-bottom: 2rem;
 }
 
-/*contenido principal*/
+/*=========================
+   CONTENIDO PRINCIPAL
+=========================*/
 .container {
   max-width: 1100px;
   margin: 0 auto;
@@ -31,7 +35,9 @@
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
-/*Cartas ofertas*/
+/*=========================
+   CARTAS OFERTAS
+=========================*/
 .especialidadDia {
   margin-bottom: 60px;
   animation: fadeIn 0.8s ease;
@@ -47,19 +53,23 @@
 }
 
 .cartaDia:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
 }
 
-/*Dia de promociones*/
+/*=========================
+   DIA DE PROMOCIONES
+=========================*/
 .dia img {
-  display: block;  
-  margin: 0 auto;  
-  max-width: 400px;
-  height: auto; 
+  display: block;
+  margin: 0 auto;
+  max-width: 400px; /* más grande que antes */
+  height: auto;
 }
 
-/*Imagenes de platos*/
+/*=========================
+   IMAGENES DE PLATOS
+=========================*/
 .imagen-plato img,
 .imagen-plato2 img,
 .imagen-plato3 img {
@@ -77,10 +87,30 @@
 .imagen-plato img:hover,
 .imagen-plato2 img:hover,
 .imagen-plato3 img:hover {
+  transform: scale(1.08) rotate(-2deg);
+}
+
+/*=========================
+   NUEVO PLATO MIÉRCOLES
+=========================*/
+.imagen-platoMiercoles img {
+  display: block;
+  margin: 0 auto;
+  max-width: 320px; /* más grande que las demás */
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  background: #fff;
+  transition: transform 0.3s ease;
+}
+
+.imagen-platoMiercoles img:hover {
   transform: scale(1.05);
 }
 
-/*contenido de carta*/
+/*=========================
+   CONTENIDO DE CARTA
+=========================*/
 .contenido {
   display: flex;
   flex-wrap: wrap;
@@ -89,10 +119,27 @@
   padding: 10px;
 }
 
-/*Titulos de platos*/
+.plato,
+.platoN2,
+.platoN3 {
+  flex: 1 1 55%;
+}
+
+.imagen-plato,
+.imagen-plato2,
+.imagen-plato3,
+.imagen-platoMiercoles {
+  flex: 1 1 40%;
+  text-align: center;
+}
+
+/*=========================
+   TITULOS DE PLATOS
+=========================*/
 .plato h2,
 .platoN2 h2,
-.platoN3 h2 {
+.platoN3 h2,
+.platoMartes h2 {
   color: #ffffff;
   font-size: 1.9rem;
   font-weight: 900;
@@ -103,10 +150,22 @@
   margin-bottom: 15px;
 }
 
-/*Lista de platos*/
+.plato h2:hover,
+.platoN2 h2:hover,
+.platoN3 h2:hover,
+.platoMartes h2:hover {
+  text-shadow: 2px 2px 20px rgba(255,255,255,0.8);
+  transform: scale(1.05);
+  transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+/*=========================
+   LISTA DE PLATOS
+=========================*/
 .plato ul,
 .platoN2 ul,
-.platoN3 ul {
+.platoN3 ul,
+.platoMartes ul {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -114,7 +173,8 @@
 
 .plato ul li,
 .platoN2 ul li,
-.platoN3 ul li {
+.platoN3 ul li,
+.platoMartes ul li {
   font-size: 1.15rem;
   padding: 10px 0;
   border-bottom: 1px dotted #b3d1ff;
@@ -129,13 +189,15 @@
 
 .plato ul li:last-child,
 .platoN2 ul li:last-child,
-.platoN3 ul li:last-child {
+.platoN3 ul li:last-child,
+.platoMartes ul li:last-child {
   border-bottom: none;
 }
 
 .plato ul li::before,
 .platoN2 ul li::before,
-.platoN3 ul li::before {
+.platoN3 ul li::before,
+.platoMartes ul li::before {
   content: "🍽️";
   font-size: 1.2rem;
   margin-right: 10px;
@@ -143,27 +205,15 @@
 
 .plato ul li:hover,
 .platoN2 ul li:hover,
-.platoN3 ul li:hover {
-  color: #ffffff;
-  transform: translateX(5px);
-  cursor: pointer;
+.platoN3 ul li:hover,
+.platoMartes ul li:hover {
+  color: #ffd700;
+  transform: translateX(8px) scale(1.05);
 }
 
-/*Plato y imagen */
-.imagen-plato,
-.imagen-plato2,
-.imagen-plato3 {
-  flex: 1 1 40%;
-  text-align: center;
-}
-
-.plato,
-.platoN2,
-.platoN3 {
-  flex: 1 1 55%;
-}
-
-/*ANIMACIONES*/
+/*=========================
+   ANIMACIONES
+=========================*/
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -175,7 +225,9 @@
   }
 }
 
-/*responsivo para cuando la pantalla tenga 768 px*/
+/*=========================
+   RESPONSIVO
+=========================*/
 @media (max-width: 768px) {
   .contenido {
     flex-direction: column;
@@ -187,21 +239,24 @@
   .platoN3,
   .imagen-plato,
   .imagen-plato2,
-  .imagen-plato3 {
+  .imagen-plato3,
+  .imagen-platoMiercoles {
     flex: 1 1 100%;
     order: 0;
   }
 
   .plato h2,
   .platoN2 h2,
-  .platoN3 h2 {
+  .platoN3 h2,
+  .platoMartes h2 {
     text-align: center;
     font-size: 1.4rem;
   }
 
   .plato ul li,
   .platoN2 ul li,
-  .platoN3 ul li {
+  .platoN3 ul li,
+  .platoMartes ul li {
     justify-content: center;
     font-size: 1rem;
   }
@@ -209,13 +264,17 @@
   .dia img,
   .imagen-plato img,
   .imagen-plato2 img,
-  .imagen-plato3 img {
+  .imagen-plato3 img,
+  .imagen-platoMiercoles img,
+  .imagen-platoMartes img {
     max-width: 80%;
     margin-top: 1rem;
   }
 }
 
-/*Martes*/
+/*=========================
+   MARTES ESPECIAL
+=========================*/
 .cartaDia {
   background: linear-gradient(to bottom, #d4f0ff, #007bff 80%);
   color: white;
@@ -250,7 +309,7 @@
   opacity: 0.8;
 }
 
-/* Texto del bloque Martes */
+/* Texto Martes */
 .platoMartes h2 {
   color: #fff;
   font-size: 2rem;
@@ -259,12 +318,6 @@
   text-align: left;
   margin-bottom: 20px;
   text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
-}
-
-.platoMartes ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
 }
 
 .platoMartes ul li {
@@ -289,7 +342,6 @@
   margin-right: 10px;
 }
 
-/* Imagen lateral de la cazuela */
 .imagen-platoMartes {
   flex: 1 1 40%;
   text-align: right;
@@ -304,66 +356,5 @@
 }
 
 .imagen-platoMartes img:hover {
-  transform: scale(1.05);
-}
-
-/* Responsive Martes */
-@media (max-width: 768px) {
-  .platoMartes, .imagen-platoMartes {
-    flex: 1 1 100%;
-    text-align: center;
-  }
-
-  .platoMartes h2 {
-    text-align: center;
-    font-size: 1.6rem;
-  }
-
-  .platoMartes ul li {
-    justify-content: center;
-    font-size: 1rem;
-  }
-
-  .imagen-platoMartes img {
-    max-width: 80%;
-    margin-top: 1rem;
-  }
-}
-
-/*------------------- ANIMACIONES MEJORADAS -------------------*/
-
-/* Carta del día: levitación y sombra más intensa */
-.cartaDia:hover {
-  transform: translateY(-10px) scale(1.02);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-
-/* Imagen de plato: zoom + ligero giro */
-.imagen-plato img:hover,
-.imagen-plato2 img:hover,
-.imagen-plato3 img:hover,
-.imagen-platoMartes img:hover {
   transform: scale(1.08) rotate(-2deg);
-  transition: transform 0.4s ease;
-}
-
-/* Títulos de plato: brillo y ligero aumento */
-.plato h2:hover,
-.platoN2 h2:hover,
-.platoN3 h2:hover,
-.platoMartes h2:hover {
-  text-shadow: 2px 2px 20px rgba(255,255,255,0.8);
-  transform: scale(1.05);
-  transition: transform 0.3s ease, text-shadow 0.3s ease;
-}
-
-/* Lista de platos: resaltar y mover ligeramente */
-.plato ul li:hover,
-.platoN2 ul li:hover,
-.platoN3 ul li:hover,
-.platoMartes ul li:hover {
-  color: #ffd700;
-  transform: translateX(8px) scale(1.05);
-  transition: color 0.3s ease, transform 0.3s ease;
 }
