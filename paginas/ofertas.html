@@ -1,77 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OFERTAS</title>
-      <link rel="stylesheet" href="../css/index.css" />
-      <link rel="stylesheet" href="../css/ofertas.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OFERTAS</title>
+  <link rel="stylesheet" href="../css/index.css" />
+  <link rel="stylesheet" href="../css/ofertas.css" />
 </head>
 <body>
-    <div class="contenedor">
-    <!-- Encabezado -->
+  <div class="contenedor">
     <header class="header">
       <div class="logo-container">
         <img src="../img/brissa_logo.jpg" alt="logo de brissa" class="logo" />
         <h1 class="nombre-negocio"><br />BRISSA<br />¡TU MARISQUERIA!</h1>
       </div>
-
       <nav class="menu">
         <a href="../index.html">INICIO</a>
         <a href="../paginas/">MENU</a>
         <a href="../paginas/contactanos.html">CONTACTANOS</a>
         <a href="../paginas/ofertas.html">OFERTAS</a>
       </nav>
-      <!-- Ola decorativa -->
       <div class="wave">
         <svg viewBox="0 0 500 150" preserveAspectRatio="none">
-          <path d="M0.00,49.98 C130.64,243.27 359.20,-90.27 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
-            style="stroke: none; fill: #ffff;"></path>
+          <path
+            d="M0.00,49.98 C130.64,243.27 359.20,-90.27 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+            style="stroke: none; fill: #ffff;"
+          ></path>
         </svg>
       </div>
     </header>
-    <br>
-    <br>
-    <br>
-    <br>
-     <!--fin del encabezado-->
-</body>
     <header class="headerplato">
-      <h1>Sabor del dìa</h1>
-      <p>Descubre nuestros platillos especiales día a día. ¡Ven y disfruta!</p>
+      <h1>Sabor del día</h1>
+      <p>Descubre nuestros platillos especiales cada día de la semana. ¡Ven y disfruta!</p>
     </header>
     <div class="container">
-      <div class="principal">
-        <h2>Platillos del dia</h2>
-        <p>Cada día de la semana preparamos algo especial.</p>
-      </div>
-      <selection class="especialidadDia">
+      <!-- Lunes -->
+      <section class="especialidadDia">
         <div class="cartaDia">
           <div class="dia">
-            <img src="../img/lunes_mitad_precio-removebg-preview.png" alt="Promocion lunes">
+            <img src="../img/lunes_mitad_precio-removebg-preview.png" alt="Promoción Lunes" />
           </div>
           <div class="contenido">
             <div class="plato">
-              <h4>CEVICHES</h4>
+              <h2>Lunes — CEVICHES</h2>
               <ul>
-                <li data-precio="9,00">Ceviche de camarón</li>
-                <li data-precio="9,00">Ceviche de concha</li>
-                <li data-precio="8,00">Ceviche de calamar</li>
-                <li data-precio="8,00">Ceviche de pulpo</li>
-                <li data-precio="8,00">Ceviche de pescado</li>
-                <li data-precio="8,00">Ceviche mixto</li>
-                <li data-precio="12,00">Ceviche marinero</li>
-                <li data-precio="11,00">Ceviche tres en uno</li>
-                <li data-precio="14,00">Rompe colchón</li>
+                <li>Ceviche de camarón — $9.00</li>
+                <li>Ceviche de concha — $9.00</li>
+                <li>Ceviche mixto — $8.00</li>
               </ul>
             </div>
-            <div class="imagen-ceviche">
-              <h3>CEVICHES</h3>
-              <img src="../img/ceviche promocion.png" alt="Ceviche promocional">
+            <div class="imagen-plato">
+              <img src="../img/ceviche promocion.png" alt="Ceviche promocional" />
+            </div>
+            <div class="platoN2">
+              <h2>CEVICHE MANABA</h2>
+              <ul>
+                <li>Ceviche manaba de pescado — $9.00</li>
+                <li>Ceviche manaba de camaron — $9.00</li>
+                <li>Ceviche manaba mixto — $11.00</li>
+              </ul>
+            </div>
+            <div class="imagen-plato2">
+              <img src="../img/ceviche_promocional_manaba-removebg-preview.png" alt="Ceviche promocional manaba" />
+            </div>
+            <div class="platoN3">
+              <h2>CEVICHE PERUANO</h2>
+              <ul>
+                <li>Ceviche peruano de pescado — $9.00</li>
+                <li>Ceviche peruano de camarón — $10.00</li>
+                <li>Ceviche peruano mixto — $11.00</li>
+              </ul>
+            </div>
+            <div class="imagen-plato3">
+              <img src="../img/ceviche_promocional_peruano-removebg-preview.png" alt="Ceviche promocional peruano" />
             </div>
           </div>
         </div>
-        <div></div>
-      </selection>
+      </section>
+
+      <!-- Martes -->
+      <section class="especialidadDia">
+        <div class="cartaDia">
+          <div class="diaMartes">
+            <img src="../img/promocion_martes-removebg-preview.png" alt="Promoción Martes" />
+          </div>
+          <div class="contenido">
+            <div class="platoMartes">
+              <h2>Martes — CAZUELAS</h2>
+              <ul>
+                <li>Cazuela normal — $4.00</li>
+                <li>Cazuela de camaron — $5.00</li>
+                <li>Cazuela marinera — $10.00</li>
+              </ul>
+            </div>
+            <div class="imagen-platoMartes">
+              <img src="../img/cazuela-removebg-preview.png" alt="Cazuela" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Miércoles -->
+      <section class="especialidadDia">
+        <div class="cartaDia">
+          <div class="dia">
+            <img src="../img/miercoles_promo.png" alt="Promoción Miércoles" />
+          </div>
+          <div class="contenido">
+            <div class="plato">
+              <h2>Miércoles — CONCHITAS</h2>
+              <ul>
+                <li>Conchitas asadas normales — $10.00</li>
+                <li>Conchitas de salsa de piña — $14.00</li>
+                <li>Conchitas con cangrejo — $14.00</li>
+                <li>Conchitas a la diabla - $11.00</li>
+                <li>Conchitas gratinadas - $12.00</li>
+                <li>Conchitas al ajillo - $14.00</li>
+                <li>Conchitas de camaron - $14.00</li>  
+                <li>Conchitas con cangrejo - $14.00</li>
+                <li>Conchitas de calamar - $14.00</li>
+                <li>Conchitas en salsa de mariscos - $14.00</li>
+              </ul>
+            </div>
+            <div class="imagen-plato">
+              <img src="../img/caldo_marisco.png" alt="Caldos de marisco" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Jueves -->
+      <section class="especialidadDia">
+        <div class="cartaDia">
+          <div class="dia">
+            <img src="../img/jueves_promo.png" alt="Promoción Jueves" />
+          </div>
+          <div class="contenido">
+            <div class="plato">
+              <h2>Jueves — Camarones apanados</h2>
+              <ul>
+                <li>Con arroz y ensalada — $10.00</li>
+                <li>Con patacones — $11.00</li>
+              </ul>
+            </div>
+            <div class="imagen-plato">
+              <img src="../img/camarones_apanados.png" alt="Camarones apanados" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Viernes -->
+      <section class="especialidadDia">
+        <div class="cartaDia">
+          <div class="dia">
+            <img src="../img/viernes_promo.png" alt="Promoción Viernes" />
+          </div>
+          <div class="contenido">
+            <div class="plato">
+              <h2>Viernes — Parrillada Marinera</h2>
+              <ul>
+                <li>Parrillada simple — $15.00</li>
+                <li>Parrillada mixta — $18.00</li>
+              </ul>
+            </div>
+            <div class="imagen-plato">
+              <img src="../img/parrillada_mariscos.png" alt="Parrillada" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sábado -->
+      <section class="especialidadDia">
+        <div class="cartaDia">
+          <div class="dia">
+            <img src="../img/sabado_promo.png" alt="Promoción Sábado" />
+          </div>
+          <div class="contenido">
+            <div class="plato">
+              <h2>Sábado — Encocados</h2>
+              <ul>
+                <li>Encocado de camarón — $12.00</li>
+                <li>Encocado mixto — $14.00</li>
+              </ul>
+            </div>
+            <div class="imagen-plato">
+              <img src="../img/encocado.png" alt="Encocado" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Domingo -->
+      <section class="especialidadDia">
+        <div class="cartaDia">
+          <div class="dia">
+            <img src="../img/domingo_promo.png" alt="Promoción Domingo" />
+          </div>
+          <div class="contenido">
+            <div class="plato">
+              <h2>Domingo — Sorpresa del Chef</h2>
+              <ul>
+                <li>Plato especial sorpresa — $??.??</li>
+              </ul>
+            </div>
+            <div class="imagen-plato">
+              <img src="../img/chef_sorpresa.png" alt="Sorpresa del chef" />
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
+  </div>
+</body>
 </html>

@@ -1,157 +1,369 @@
-
-
-/* Contenedor general */
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #f0f8ff;
-  color: #333;
+/*titulo principal*/
+.headerplato {
+  text-align: center;
+  margin: 40px 0;
 }
 
 .headerplato h1 {
   font-size: 3rem;
-  color: #0288d1;
+  color: #007bff;
   text-transform: uppercase;
-  text-align: center;
-  margin-top: 1rem;
   font-weight: 900;
   letter-spacing: 2px;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 .headerplato p {
-  text-align: center;
-  color: #555;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
+  opacity: 0.9;
+  color: #007bff;
   margin-bottom: 2rem;
 }
 
-/* Sección principal */
+/*contenido principal*/
 .container {
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 20px;
+  background: linear-gradient(180deg, #ffffff, #e6f2ff);
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
-.principal h2 {
-  text-align: center;
-  font-size: 2rem;
-  color: #007399;
-  margin-bottom: 0.5rem;
+/*Cartas ofertas*/
+.especialidadDia {
+  margin-bottom: 60px;
+  animation: fadeIn 0.8s ease;
 }
 
-.principal p {
-  text-align: center;
-  color: #666;
-  margin-bottom: 2rem;
-}
-
-/* Cartas */
 .cartaDia {
+  border-radius: 20px;
   background: #fff;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-  border-radius: 15px;
-  padding: 25px 30px;
-  max-width: 600px;
-  margin: 0 auto 30px;
-  position: relative;
-  border-top: 6px solid #0288d1;
+  padding: 30px 40px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+  border-top: 6px solid #007bff;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
-/* Imagen del día */
+.cartaDia:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+/*Dia de promociones*/
 .dia img {
+  display: block;  
+  margin: 0 auto;  
+  max-width: 400px;
+  height: auto; 
+}
+
+/*Imagenes de platos*/
+.imagen-plato img,
+.imagen-plato2 img,
+.imagen-plato3 img {
   display: block;
-  margin: 0 auto 20px;
-  max-width: 90%;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 250px;
   height: auto;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  background: #fff;
+  transition: transform 0.3s ease;
 }
 
-/* Platos */
-.plato h4 {
-  font-size: 1.6rem;
-  color: #ff9800;
-  margin-bottom: 10px;
-  font-weight: 700;
+.imagen-plato img:hover,
+.imagen-plato2 img:hover,
+.imagen-plato3 img:hover {
+  transform: scale(1.05);
+}
+
+/*contenido de carta*/
+.contenido {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+/*Titulos de platos*/
+.plato h2,
+.platoN2 h2,
+.platoN3 h2 {
+  color: #ffffff;
+  font-size: 1.9rem;
+  font-weight: 900;
   text-transform: uppercase;
-  text-align: center;
+  text-align: left;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.4);
+  margin-bottom: 15px;
 }
 
-/* Lista */
-.plato ul {
+/*Lista de platos*/
+.plato ul,
+.platoN2 ul,
+.platoN3 ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
-.plato ul li {
-  font-size: 1.1rem;
+.plato ul li,
+.platoN2 ul li,
+.platoN3 ul li {
+  font-size: 1.15rem;
   padding: 10px 0;
-  border-bottom: 1px dashed #ccc;
-  text-align: center;
+  border-bottom: 1px dotted #b3d1ff;
+  color: #cce5ff;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
-.plato ul li:last-child {
+.plato ul li:last-child,
+.platoN2 ul li:last-child,
+.platoN3 ul li:last-child {
   border-bottom: none;
 }
 
-/* Icono decorativo */
-.plato ul li::before {
-  content: "🍤 ";
+.plato ul li::before,
+.platoN2 ul li::before,
+.platoN3 ul li::before {
+  content: "🍽️";
   font-size: 1.2rem;
+  margin-right: 10px;
 }
 
-/* Efecto hover */
-.plato ul li:hover {
-  background: #e0f7fa;
-  color: #007399;
-  transition: 0.3s;
+.plato ul li:hover,
+.platoN2 ul li:hover,
+.platoN3 ul li:hover {
+  color: #ffffff;
+  transform: translateX(5px);
+  cursor: pointer;
 }
 
-/* Responsivo */
-@media (max-width: 600px) {
-  .headerplato h1 {
-    font-size: 2rem;
+/*Plato y imagen */
+.imagen-plato,
+.imagen-plato2,
+.imagen-plato3 {
+  flex: 1 1 40%;
+  text-align: center;
+}
+
+.plato,
+.platoN2,
+.platoN3 {
+  flex: 1 1 55%;
+}
+
+/*ANIMACIONES*/
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/*responsivo para cuando la pantalla tenga 768 px*/
+@media (max-width: 768px) {
+  .contenido {
+    flex-direction: column;
+    text-align: center;
   }
 
-  .plato h4 {
+  .plato,
+  .platoN2,
+  .platoN3,
+  .imagen-plato,
+  .imagen-plato2,
+  .imagen-plato3 {
+    flex: 1 1 100%;
+    order: 0;
+  }
+
+  .plato h2,
+  .platoN2 h2,
+  .platoN3 h2 {
+    text-align: center;
     font-size: 1.4rem;
   }
 
-  .plato ul li {
+  .plato ul li,
+  .platoN2 ul li,
+  .platoN3 ul li {
+    justify-content: center;
     font-size: 1rem;
   }
 
-  .dia img {
-    max-width: 100%;
-  }
-}
-.imagen-ceviche {
-  text-align: center;
-  width: 35%;
-}
-
-.imagen-ceviche img {
-  max-width: 100%;
-  border-radius: 10px;
-  margin-bottom: 0.5rem;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-}
-
-.imagen-ceviche h3 {
-  background: #0288d1;
-  color: #fff;
-  padding: 5px 0;
-  border-radius: 5px;
-  font-weight: 700;
-  letter-spacing: 1px;
-}
-@media (max-width: 700px) {
-  .carta {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  .imagen-ceviche {
-    width: 100%;
+  .dia img,
+  .imagen-plato img,
+  .imagen-plato2 img,
+  .imagen-plato3 img {
+    max-width: 80%;
     margin-top: 1rem;
   }
+}
+
+/*Martes*/
+.cartaDia {
+  background: linear-gradient(to bottom, #d4f0ff, #007bff 80%);
+  color: white;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+.diaMartes img {
+  display: block;
+  margin: 0 auto 20px auto;
+  max-width: 380px;
+  height: auto;
+  filter: drop-shadow(2px 4px 8px rgba(0,0,0,0.3));
+  transition: transform 0.3s ease;
+}
+
+.diaMartes img:hover {
+  transform: scale(1.05);
+}
+
+/* Fondo con efecto de ola */
+.cartaDia::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 160px;
+  background: url("../img/olas.png") no-repeat bottom center;
+  background-size: cover;
+  opacity: 0.8;
+}
+
+/* Texto del bloque Martes */
+.platoMartes h2 {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-align: left;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+}
+
+.platoMartes ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.platoMartes ul li {
+  font-size: 1.2rem;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.5);
+  color: #fff;
+  font-weight: 500;
+  text-shadow: 1px 1px 6px rgba(0,0,0,0.3);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.platoMartes ul li:last-child {
+  border-bottom: none;
+}
+
+.platoMartes ul li::before {
+  content: "🍤";
+  font-size: 1.3rem;
+  margin-right: 10px;
+}
+
+/* Imagen lateral de la cazuela */
+.imagen-platoMartes {
+  flex: 1 1 40%;
+  text-align: right;
+}
+
+.imagen-platoMartes img {
+  width: 100%;
+  max-width: 280px;
+  border-radius: 20px;
+  filter: drop-shadow(0 5px 15px rgba(0,0,0,0.4));
+  transition: transform 0.3s ease;
+}
+
+.imagen-platoMartes img:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive Martes */
+@media (max-width: 768px) {
+  .platoMartes, .imagen-platoMartes {
+    flex: 1 1 100%;
+    text-align: center;
+  }
+
+  .platoMartes h2 {
+    text-align: center;
+    font-size: 1.6rem;
+  }
+
+  .platoMartes ul li {
+    justify-content: center;
+    font-size: 1rem;
+  }
+
+  .imagen-platoMartes img {
+    max-width: 80%;
+    margin-top: 1rem;
+  }
+}
+
+/*------------------- ANIMACIONES MEJORADAS -------------------*/
+
+/* Carta del día: levitación y sombra más intensa */
+.cartaDia:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Imagen de plato: zoom + ligero giro */
+.imagen-plato img:hover,
+.imagen-plato2 img:hover,
+.imagen-plato3 img:hover,
+.imagen-platoMartes img:hover {
+  transform: scale(1.08) rotate(-2deg);
+  transition: transform 0.4s ease;
+}
+
+/* Títulos de plato: brillo y ligero aumento */
+.plato h2:hover,
+.platoN2 h2:hover,
+.platoN3 h2:hover,
+.platoMartes h2:hover {
+  text-shadow: 2px 2px 20px rgba(255,255,255,0.8);
+  transform: scale(1.05);
+  transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+/* Lista de platos: resaltar y mover ligeramente */
+.plato ul li:hover,
+.platoN2 ul li:hover,
+.platoN3 ul li:hover,
+.platoMartes ul li:hover {
+  color: #ffd700;
+  transform: translateX(8px) scale(1.05);
+  transition: color 0.3s ease, transform 0.3s ease;
 }
